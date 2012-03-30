@@ -14,7 +14,7 @@ object AnagramFinder {
 
   def addWord(currentAnagrams: Map[String, Set[String]], w: String) = {
     val newWord = w.trim.toLowerCase
-    var matches = currentAnagrams(newWord.sorted)
+    val matches = currentAnagrams(newWord.sorted)
     currentAnagrams + (newWord.sorted -> (matches + newWord))
   }
 
